@@ -38,4 +38,19 @@ $ali->thirdpay();
 
 //试想一下,在这里我们能否和工厂模式结合起来呢?因为一次只可能使用到一种支付方式,我们是否可以根据参数判断使用哪一种支付方式,
 //而不用自己去实例化类,减少调用方和类的关系呢?
+
+//工厂模式 + 适配器模式
+class payFactory{
+    public static  function pay($third){
+        if($third == 'ali'){
+            return new AdapterAlipay();
+        }elseif($third == 'tencent'){
+            return new AdapterTencent();
+        }else{
+
+        }
+    }
+}
+$thirdpay = payFactory::pay('ali');
+$thirdpay->thirdpay();
 ?>
