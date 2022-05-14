@@ -1,9 +1,9 @@
 <?php
 /**
  * 观察者模式
- * User: zhuxinlei
- * Date: 2018/6/4
- * Time: 下午11:55
+ * User: zhouwen
+ * Date: 2022/05/14
+ * Time: 下午17:55
  */
 //被观察者接口
 interface Observable{
